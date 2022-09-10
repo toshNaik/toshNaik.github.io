@@ -1,0 +1,31 @@
+---
+layout: default
+title: Projects
+active: projects
+---
+{% assign sorted = site.projects | reverse %}
+{% for project in sorted %}
+<a class="card mb-3" style="text-decoration: none;" href={{ project.link }} target="_blank">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img src={{ project.img_path }} class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h2 class="card-title" style="padding: 20px;">{{ project.title }}</h5>
+                <p class="card-text" style="text-align: start; padding-right: 16px;">
+                {{ project.content | markdownify }}
+                </p>
+            </div>
+        </div>
+    </div>
+</a>
+{% endfor %}
+
+<style type="text/css">
+a.card:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.01);
+    background-color: rgba(173, 171, 171, 0.235);
+}
+</style>
