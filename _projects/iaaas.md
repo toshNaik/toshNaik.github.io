@@ -1,5 +1,5 @@
 ---
-title: Image Augmentation as a Service (IAaaS)
+title: Image Augmentation as a Service
 date: 2022-12-01
 img_path: /assets/img/iaaas.png
 link: https://github.com/toshNaik/IAaaS

@@ -1,98 +1,173 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat';
 }
-body {
-    font-family: "Source Sans Pro", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    letter-spacing: normal;
+
+.body {
+    /* background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%); */
+    background: linear-gradient(109.6deg, #360033 30%, #08555c 91.1%);
+    color: whitesmoke;
+}
+
+.body.dark_mode {
+    /* background: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%); */
+    background: linear-gradient(315deg, #FC5C7D 0%, #6A82FB 91.1%);
+    color: black;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    font-weight: bold;
+    color: inherit;
+}
+
+@media screen and (min-width: 2000px) {
+    body {
+        zoom: 1.8;
+        -moz-transform: scale(1.8); 
+        -moz-transform-origin: 0 0;
+    }
+}
+/*############## INTRO SECTION START : Hello I'm Ashutosh and Picture ####################*/
+.introduction {
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hello {
     text-align: center;
-    color: #414f57;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-	justify-content: center;
 }
+
+.section__photo {
+    height: 300px;
+    border-radius: 20%;
+    margin: 32px;
+    border-style: solid;
+    border-width: thick;
+    border-color: rgb(248, 253, 207);
+}
+
+.section__hello {
+    padding: 16px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.section__subheading {
+    padding: 16px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 380px) {
+    .section__photo {
+        height: 280px;
+        margin: 16px;
+    }
+}
+/*############## INTRO SECTION END ####################*/
+
+/*############## ABOUT SECTION START : BIO AND SKILLS ################*/
+.about_container {
+    margin: 0px 200px 0px 200px;
+}
+
+.about {
+    margin-top: 64px;
+    font-size: 20px;
+    margin-bottom: 64px;
+}
+
+.about h3 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bio p {
+    text-align: justify;
+    line-height: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.skills li {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+    .about_container {
+        margin: 0px 150px 0px 150px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about_container {
+        margin: 0px 32px 0px 32px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about_container {
+        margin: 0px 16px 0px 16px;
+    }
+
+    .about {
+        font-size: 16px;
+    }
+}
+
+/*############## ABOUT SECTION END ################*/
+
+/*############## FOOTER START ################*/
 footer {
     width: 100%;
-    display: block;
-    text-align: center;
-    font-size: 17.5px;
-    color: white;
-    line-height: 75px;
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(29, 40, 48);
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-/* div.container {
-    width: 900px;
-} */
-div.main {
-    width: 800px;
-    background-color: white;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 75px 25px;
-    min-height: 490px;
+
+footer ul {
+    list-style-type: none;
 }
-section.photo img {
-    height: 300px;
-    border-radius: 50%;
+
+footer li {
+    height: 50px;
+    display: inline;
+    margin: 0 20px;
 }
-div.main section.info {
-    height: 115px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+
+.links a {
+    text-decoration: none;
 }
-li.nav-item a.active {
-    text-decoration: underline;
+.links a svg {
+    height: 50px;
+    width: auto;
 }
-.name {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 50px;
-    padding-top: 25px;
+.links a svg path {
+    fill: #c8cccf;
+    transition: fill 0.25s ease;
 }
-.subheading {
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 30px;
-    padding-bottom: 15px;
+.links a#mail:hover svg path {
+    fill: #bb001b;
 }
-.hover-overlay {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+.links a#github:hover svg path {
+    fill: #333;
 }
-div.col-md-4 img {
-    height: 260px;
-    object-fit: scale-down;
+.links a#linkedin:hover svg path {
+    fill: #0e76a8;
 }
-div.about p {
-    letter-spacing: normal;
-    text-align: justify;
-    font-size: 18px;
-}
-section.links {
-    height: 100px;
-    padding-top: 37.5px;
-    padding-bottom: 12.5px;
-    box-sizing: border-box;
-}
-/* @media only screen and (max-width: 444.44px) {
-    div.main {
-        width: 90%;
-    }
-}
-@media only screen and (max-height: 653.88px) and (max-width: 444.44px) {
-    div.main {
-        margin: 5vw 0;
-        margin-bottom: 0;
-    }
-    footer {
-        position: relative;
-    }
-} */
+/*############## FOOTER END ################*/
