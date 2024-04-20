@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from "$app/paths";
     import { onMount } from "svelte";
     import "../app.css"
     import Navbar from "$lib/components/Navbar.svelte";
@@ -31,7 +32,7 @@
     </svelte:fragment>
     <svelte:fragment slot="trailing">
         <ul class="menu menu-horizontal px-1">
-        <li><a class="font-semibold" href="/resume.pdf" target="_blank">resume</a></li>
+        <li><a class="font-semibold" href={ base + "/resume.pdf" } target="_blank">resume</a></li>
         </ul>
     </svelte:fragment>
 </Navbar>

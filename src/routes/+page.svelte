@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from "$app/paths";
 	import { onMount } from "svelte";
     import Avatar from "$lib/components/Avatar.svelte";
     import Projectcard from "$lib/components/Projectcard.svelte";
@@ -30,7 +31,7 @@
 <div class="flex flex-col items-center md:flex-row md:justify-around">
 	<div class="flex flex-col md:self-start">
 		<div class="flex flex-row md:flex-col">
-			<Avatar src="/ashutosh_hd.jpg" alt="avatar" class="w-32 rounded-full md:w-56 lg:w-64" />
+			<Avatar src={ base + "/ashutosh_hd.jpg"  } alt="avatar" class="w-32 rounded-full md:w-56 lg:w-64" />
 			<div class="ml-8 flex flex-col gap-2 md:ml-6 lg:ml-10">
 				<h1 class="text-2xl font-extrabold md:mt-2">Ashutosh Naik</h1>
 				<div class="flex flex-row justify-start">
