@@ -1,9 +1,14 @@
 <script lang="ts">
+	import { base } from "$app/paths";
     // export let src: string = "https://via.placeholder.com/130";
     // export let alt: string = "Project image";
     export let title: string;
     export let description: string;
     export let url: string;
+	
+	if (url.startsWith("/")) {
+		url = base + url;
+	}
 </script>
 
 <div class="project-card card card-side bg-base-200 border border-base-200 rounded-md shadow-xl mb-4 break-inside-avoid-column">
