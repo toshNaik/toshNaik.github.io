@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
-  plugins: [require("daisyui")],
-
-  daisyui: {
-    themes: ["dark", "pastel"],
-  }
-}
-
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+			},
+			colors: {
+				accent: '#1B4F8A'
+			}
+		}
+	},
+	plugins: []
+};

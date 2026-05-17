@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+		color: #0f172a;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		/* Very subtle top-of-page gradient — fades to white after the fold */
+		background: linear-gradient(180deg, #f5f8ff 0%, #ffffff 480px) no-repeat,
+		            #ffffff;
+	}
+}
